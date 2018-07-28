@@ -5,7 +5,7 @@ let helpersTransactions = require('./../helpers/helpers_transactions');
 
 router.route('/')
   .get(helpersTransactions.getTransactions)
-  .post(helpersTransactions.createTranaction);
+  .post(helpersTransactions.createTransaction)
 
 router.route('/:transactionId')
   .get(helpersTransactions.getTransaction)
