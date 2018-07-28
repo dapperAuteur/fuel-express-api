@@ -1,9 +1,14 @@
 let mongoose = require('mongoose');
 
 let tagSchema = new mongoose.Schema({
+  tagName: {
+    type: String,
+    required: true,
+    unique: true
+  },
   text: {
     type: String,
-    required: true
+    required: false
   },
   transactions: [{
     type: mongoose.Schema.Types.ObjectId,
