@@ -10,6 +10,10 @@ let tagSchema = new mongoose.Schema({
     type: String,
     required: false
   },
+  description: {
+    type: String,
+    required: false
+  },
   transactions: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Transaction'
