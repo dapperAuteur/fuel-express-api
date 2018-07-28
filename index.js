@@ -6,6 +6,7 @@ let express = require('express'),
 
 let db = require('./models');
 
+let fuelRoutes = require('./routes/fuels');
 let tagRoutes = require('./routes/tags');
 let txRoutes = require('./routes/transactions');
 let userRoutes = require('./routes/users');
@@ -17,6 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function (req, res) {
   res.send("Fuel API Root Route");
 });
+
+app.get('/api/ver0001/fuels', fuelRoutes);
+app.delete('/api/ver0001/fuels/:id', fuelRoutes);
+app.post('/api/ver0001/fuels', fuelRoutes);
+app.put('/api/ver0001/fuels/:id', fuelRoutes);
+app.use('/api/ver0001/fuels', fuelRoutes);
 
 app.get('/api/ver0001/tags', tagRoutes);
 app.delete('/api/ver0001/tags/:id', tagRoutes);

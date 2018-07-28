@@ -6,11 +6,11 @@ let tagSchema = new mongoose.Schema({
     required: true
   },
   transactions: [{
-    type.mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Transaction'
   }],
   fuels: [{
-    type.mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Fuel'
   }]
 }, {
