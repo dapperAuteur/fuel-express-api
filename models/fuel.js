@@ -1,10 +1,6 @@
 let mongoose = require('mongoose');
 
 let fuelSchema = new mongoose.Schema({
-  vendor: {
-    type: String,
-    required: true
-  },
   date: {
     type: String,
     required: true
