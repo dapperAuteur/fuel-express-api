@@ -7,5 +7,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fourLetterWord-
   useMongoClient: true
 });
 
+module.exports.Tag = require('./tag');
 module.exports.Transaction = require('./transaction');
 module.exports.User = require('./user');
