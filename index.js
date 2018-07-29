@@ -6,6 +6,7 @@ let express = require('express'),
 
 let db = require('./models');
 
+let auth = require('./middleware/auth');
 let authRoutes = require('./routes/auth');
 let fuelRoutes = require('./routes/fuels');
 let tagRoutes = require('./routes/tags');
