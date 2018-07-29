@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 let User = require('./user');
 
-var transactionSchema = new mongoose.Schema({
+let transactionSchema = new mongoose.Schema({
   transactionEvent: {
     type: String,
     required: true
